@@ -6,7 +6,5 @@ console.log();
 const resultado = primeiroNumero * segundoNumero;
 console.log (resultado); 
 
-const resultado2 = resultado - 50
-console.log (resultado2)
-
-
+const resultado2 = resultado - 50;
+console.log (resultado2);
