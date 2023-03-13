@@ -1,7 +1,10 @@
-alert ('Atenção!!! Isso é um teste');
+let num1 = prompt('Digite um número: ');
+let num2 = prompt('Digite outro número: ');
 
-window.prompt ('Digite o seu nome:');
+num1 = Number(num1);
+num2 = Number(num2);
 
-confirma ('Confirmar algo');
+const resultado = num1 + num2;
+console.log(resultado);
 
-const confirma = confirm ('Realmente deseja apagar?');
+alert(`O resultado da sua conta foi: ${resultado}`);
