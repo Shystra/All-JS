@@ -1,5 +1,5 @@
 // if, else if eeeee else
-// else sozinho é usado apenas uma vez 
+// else sozinho é usado apenas uma vez - ele só é executado caso nenhuma seja verdadeira
 // else if usado varias vezes
 
 const hora = 50;
