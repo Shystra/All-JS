@@ -1,0 +1,20 @@
+Operadores de Comparação
+> Maior que
+>= Maior que ou ingual a
+
+< Menor que
+<= Menor que ou igual a
+
+== igualdade (valor)
+
+=== igualdade estritra (valor e tipo)
+
+!= diferente (valor)
+!== diferente estrito (valor e tipo)
+---------------------------------------------------------------
+
+Operadores Logicos
+
+&& -> and 
+|| -> or
+! -> not
