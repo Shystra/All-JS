@@ -16,5 +16,20 @@ if (hora >= 0 && hora <= 11){
     console.log ('Numero incorreto');
 }
 
+console.log ()
+
+
+
+
+
+
+const numero = 10;
+
+if (numero >= 0 && numero <= 5) {
+    console.log ('O numero esta entre 0 e 5.')
+} else {
+    console.log ('O numero Nao esta entre 0 e 5')
+}
+
 
 
