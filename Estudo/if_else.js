@@ -31,5 +31,18 @@ if (numero >= 0 && numero <= 5) {
     console.log ('O numero Nao esta entre 0 e 5')
 }
 
+console.log ()
+console.log ()
+
+
+// A partir do momento que o java achar uma das condições ele ira parar ali mesmo.
+if (numero >= 0 && numero <= 5) {
+    console.log ('O numero esta entre 0 e 5.');
+} else if (numero >= 6 && numero <= 8){
+    console.log ('O numero esta entre 6 e 8.');
+} else if (numero >= 9 && numero <= 11){
+    console.log ('O numero esta entre 9 e 11.');
+}
+
 
 
