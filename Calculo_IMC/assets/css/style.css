@@ -62,12 +62,14 @@ form button:hover {
 }
 
 .paragrafo-resultado, .bad {
-    background: rgb(223, 122, 156);
+    background: rgb(129, 122, 223);
     padding: 10px 20px;
+    border-radius: 8px;
+    color: #e9dede;
 }
 
 .bad {
-    background: rgb(223, 125, 130);
+    background: rgb(230, 115, 149);
     border-radius: 8px;
     color: #5c2525;
 }
