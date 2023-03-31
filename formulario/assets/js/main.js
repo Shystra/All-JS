@@ -23,11 +23,12 @@ form.addEventListener('submit', function (event) {
 
 
     const imc = getImc(peso, altura);
+    const nivelImc = getNivelImc(imc);
 
+    const msg = `Seu IMC é ${imc} (${nivelImc}).`;
+    setResultado(msg, true);
 
-
-
-    console.log(imc);
+    console.log(imc, nivelImc);
 });
 
 /*
@@ -38,10 +39,6 @@ Entre 30 e 34,9 - Obesidade grau 1
 Entre 35 e 39,9 - Obesidade grau 2
 Mais que 40 - Obesidade grau 3
 */
-
-
-
-
 function getNivelImc (imc) {
     const nivel = [
         'Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1',
@@ -100,6 +97,16 @@ function setResultado(msg, isValid) {
     //TODO Toda vez que chamar o resultado ele vai zerar
     resultado.innerHTML = '';
     const p = criaP();
+    
+    
+    
+    if (isValid) {
+        p.classList.add('paragrafo-resultado');
+    } else {
+        p.classList.add('bad');
+    }
+
+    
     p.innerHTML = msg;
     resultado.appendChild(p);
    
