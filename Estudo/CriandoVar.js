@@ -26,3 +26,17 @@ console.log(numerosTeste[2][1]);
 const [lista1, lista2, lista3] = numerosTeste
 console.log(lista1)
 
+
+// É possivel ajustar da seguinte forma
+const pessoa = {
+    nome: 'Lucas',
+    sobrenome: 'Souza',
+    idade: 22,
+    endereco: {
+        rua: 'Av Brasil',
+        numero: 320
+    }
+};
+// Para atribuir um novo valor
+const {nome, sobrenome} = pessoa;
+console.log (nome, sobrenome);
