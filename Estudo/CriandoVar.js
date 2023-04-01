@@ -11,6 +11,6 @@ console.log ()
 // SOPUNHETAMOS
 
 const numeros = [1000,2000,3,4,5,6,7,8,9];
-const [primeiroNMumero, segundoNumero, teste, ...resto] = numeros;
-console.log(primeiroNMumero, segundoNumero, teste);
-console.log(resto)
+const [um, , tres , , cinco] = numeros;
+console.log(um, tres, cinco);
+//console.log(resto)
