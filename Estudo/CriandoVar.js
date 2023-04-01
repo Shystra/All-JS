@@ -38,5 +38,5 @@ const pessoa = {
     }
 };
 // Para atribuir um novo valor
-const {nome, sobrenome} = pessoa;
-console.log (nome, sobrenome);
+const { endereco: { rua, numero} } = pessoa;
+console.log (rua, numero);
