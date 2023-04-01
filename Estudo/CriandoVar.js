@@ -23,3 +23,6 @@ console.log(um, tres, cinco);
 const numerosTeste =  [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ];
 console.log(numerosTeste[2][1]);
 
+const [lista1, lista2, lista3] = numerosTeste
+console.log(lista1)
+
