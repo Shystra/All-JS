@@ -9,7 +9,7 @@ while (i <= 3) {
 
 function random(min, max) {
     const numero = Math.random() * (max - min) + min;
-    return numero;
+    return Math.floor(numero);
 }
 
 let rand = random(1, 50);
