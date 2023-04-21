@@ -1,68 +1,33 @@
-function relogio() {
-    function criaHoraDosSegundos(segundos) {
-        const data = new Date(segundos * 1000);
-        return data.toLocaleTimeString('pt-BR', {
-            hour12: false,
-            timeZone: 'GMT' // Dessa forma ele nao considera a hora inteira
-        })
-    }
+const inputTarefa = document.querySelector('.input-tarefa');
+const btnTarefa = document.querySelector('.btn-tarefa');
+const tarefas = document.querySelector('.tarefas'); 
 
-    const relogio = document.querySelector('.relogio');
-    let segundos = 0; // Variavel que mantem os segundos
-    let timer;
+function criaLi () {
+    const li = document.createElement('li');
+    return li;
+}
 
-    function iniciaRelogio() {
-        timer = setInterval(function () {
-            segundos++;
-            relogio.innerHTML = criaHoraDosSegundos(segundos);
-        }, 1000);  // Resumindo essa function -> Ela basicamente adiciona +1seg a variavel "segundos"
-    };
+inputTarefa.addEventListener('keypress', function(event) {
+    if (event.keyCode === 13) { //13 é o numero da tecla enter
+        if (!inputTarefa.value) return;
+        criaTarefa(inputTarefa.value);
+    }   
+});
 
-    document.addEventListener('click', function (evento) {
-        const elemento = evento.target;
+function limpaInput(){
+    inputTarefa.value = '';
+    inputTarefa.focus();
+}
 
-        if (elemento.classList.contains('iniciar')) {
-            relogio.classList.remove('pausado');
-            clearInterval(timer);
-            iniciaRelogio();
-        };
+function criaTarefa (textoInput) {
+    const li = criaLi();
+    li.innerHTML = textoInput;
+    tarefas.appendChild(li);
+    limpaInput();
 
-        if (elemento.classList.contains('pausar')) {
-            clearInterval(timer);
-            relogio.classList.remove('pausado');
-            relogio.classList.add('pausado');
-        };
+}
 
-        if (elemento.classList.contains('zerar')) {
-            clearInterval(timer);
-            relogio.innerHTML = '00:00:00';
-            segundos = 0;
-        };
-
-    });
-};
-relogio();
-
-
-
-
-
-
-
-
-//iniciar.addEventListener('click', function(event) {
-//    relogio.classList.remove('pausado')
-//    clearInterval(timer)
-//    iniciaRelogio();
-//});
-
-//pausar.addEventListener('click', function(event) {
-//    clearInterval(timer);
-//    relogio.classList.add('pausado');
-//});
-
-//zerar.addEventListener('click', function(event) {
-//    clearInterval(timer);
-//    relogio.innerHTML = '00:00:00';
-//    segundos = 0;
-//})
+btnTarefa.addEventListener('click', function(e) {
+    if(!inputTarefa.value) return; //TODO Verifica invertido -> se input nao tem valor retorna....
+    criaTarefa(inputTarefa.value);
+});
