@@ -20,20 +20,50 @@ function iniciaRelogio() {
     }, 1000);  // Resumindo essa function -> Ela basicamente adiciona +1seg a variavel "segundos"
 };
 
+document.addEventListener('click', function(evento) {
+    const elemento = evento.target;
 
-iniciar.addEventListener('click', function(event) {
-    relogio.classList.remove('pausado')
-    clearInterval(timer)
-    iniciaRelogio();
+    if(elemento.classList.contains('iniciar')) {
+        relogio.classList.remove('pausado');
+        clearInterval(timer);
+        iniciaRelogio();
+    };
+
+    if(elemento.classList.contains('pausar')) {
+        clearInterval(timer);
+        relogio.classList.remove('pausado');
+        relogio.classList.add('pausado');
+    };
+
+    if(elemento.classList.contains('zerar')) {
+        clearInterval(timer);
+        relogio.innerHTML = '00:00:00';
+        segundos = 0;
+    };
+
 });
 
-pausar.addEventListener('click', function(event) {
-    clearInterval(timer);
-    relogio.classList.add('pausado');
-});
 
-zerar.addEventListener('click', function(event) {
-    clearInterval(timer);
-    relogio.innerHTML = '00:00:00';
-    segundos = 0;
-})
+
+
+
+
+
+
+
+//iniciar.addEventListener('click', function(event) {
+//    relogio.classList.remove('pausado')
+//    clearInterval(timer)
+//    iniciaRelogio();
+//});
+
+//pausar.addEventListener('click', function(event) {
+//    clearInterval(timer);
+//    relogio.classList.add('pausado');
+//});
+
+//zerar.addEventListener('click', function(event) {
+//    clearInterval(timer);
+//    relogio.innerHTML = '00:00:00';
+//    segundos = 0;
+//})
