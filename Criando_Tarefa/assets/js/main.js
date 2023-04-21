@@ -19,15 +19,35 @@ function limpaInput(){
     inputTarefa.focus();
 }
 
+function criaBotaoApagar(li) {
+    li.innerHTML += ' ';
+    const botaoApagar = document.createElement('button');
+    botaoApagar.innerHTML = 'Apagar';
+    
+    botaoApagar.setAttribute('class', 'apagar');
+    botaoApagar.setAttribute('title', 'Apagar Tarefa');
+    li.appendChild(botaoApagar);
+}
+
+
 function criaTarefa (textoInput) {
     const li = criaLi();
     li.innerHTML = textoInput;
     tarefas.appendChild(li);
     limpaInput();
+    criaBotaoApagar(li);
 
 }
 
 btnTarefa.addEventListener('click', function(e) {
     if(!inputTarefa.value) return; //TODO Verifica invertido -> se input nao tem valor retorna....
     criaTarefa(inputTarefa.value);
+});
+
+document.addEventListener('click', function(event) {
+    const element = event.target;
+
+    if (element.classList.contains('apagar')) {
+        element.parentElement.remove();
+    };
 });
