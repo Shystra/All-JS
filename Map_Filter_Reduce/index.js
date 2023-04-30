@@ -10,7 +10,15 @@ const produtos = [
 const ids = produtos.map(produto => produto.id);
 const nomes = produtos.map(produto => produto.nome)
 
+const numeros = [1, 2, 3, 4, 5, 6];
+
+const duplicados = numeros.map(x => x * 2);
+
+
+
 
 
 console.log(ids);
 console.log(nomes);
+console.log();
+console.log(duplicados)
