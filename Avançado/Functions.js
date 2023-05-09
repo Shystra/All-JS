@@ -24,11 +24,10 @@ console.log()
 function contaExemploTwo(operador, acumulador, ...numeros) {
     for(let numero of numeros) {
         if (operador === '+') acumulador += numero;
-        if (operador === '-') acumulador -+ numero;
-        if (operador === '/') acumulador /= numero;
-        if (operador === '*') acumulador *= numero;
+            if (operador === '-') acumulador -+ numero;
+                if (operador === '/') acumulador /= numero;
+                    if (operador === '*') acumulador *= numero;
     }
     console.log(acumulador)
 }
-
 contaExemploTwo('+', 10, 20)
