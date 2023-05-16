@@ -9,7 +9,7 @@ function peopleMake (name, lastName, w, k) {
 
         width: w,
         kg: k,
-        imc(){
+        BMI () {
             const indice = this.width / (this.width ** 2);
             return indice.toFixed(2);
         }
