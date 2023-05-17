@@ -1,6 +1,10 @@
 function Pessoa (nome, sobrenome){
     this.nome = nome;
     this.sobrenome = sobrenome;
+
+    this.metodo = function() {
+        console.log(this.nome + ' Sou um método ');
+    };
 }
 
 
