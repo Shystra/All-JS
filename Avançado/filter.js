@@ -23,7 +23,7 @@ const idadeAlta = pessoas.filter (i => i.idade >= 50);
 console.log( idadeAlta );
 
 const terminaComA =  pessoas.filter (i => i.nome.toLowerCase().endsWith('a'));
-console.log( terminaComA )
+console.log( terminaComA );
 
 
 
