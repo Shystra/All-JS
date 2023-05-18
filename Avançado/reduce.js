@@ -8,7 +8,9 @@ const total = numeros.reduce(function ( acumulador, valor, indice, array ){
 console.log( total );
 
 const numeroPar = numeros.reduce(function ( acumulador, valor ) {
-    if( valor % 2 !== 0 ) acumulador.push(valor);
+    if( valor % 2 == 0 )
+    { acumulador += valor };
     return acumulador;
-}, []);
+
+}, 0);
 console.log(numeroPar);
