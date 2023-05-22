@@ -3,5 +3,5 @@ const outraCoisa = {...produto};
 
 outraCoisa.nome = 'Outro nome';
 
-console.log( produto )
-console.log( outraCoisa )
+console.log( produto );
+console.log( outraCoisa );
